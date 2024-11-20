@@ -8,8 +8,8 @@ Final Project requirement for Web System and Technologies, System Analysis and D
 # SDG 4: Quality Education
 
 # Members
-* Caguimbal, Mark Dave
+* Caguimbal, Mark Dave O.
 * Madera, Harvey V.
-* Mercado, Henrick
+* Mercado, Henrick M.
 
 # Contributions
