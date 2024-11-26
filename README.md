@@ -10,6 +10,6 @@ Final Project requirement for Web System and Technologies, System Analysis and D
 # Members
 * Caguimbal, Mark Dave O.
 * Madera, Harvey V.
-* Mercado, Henrick M.
+* Mercado, Jhon Henrick M.
 
 # Contributions
