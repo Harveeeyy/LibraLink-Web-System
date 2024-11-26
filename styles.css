@@ -68,6 +68,25 @@ body {
     display: none; /* Initially hidden */
 }
 
+.search-bar:focus {
+    border-color: #007BFF;
+}
+.search-container {
+    position: relative;
+}
+
+.search-bar {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-bar:focus {
+    border-color: #007BFF;
+}
+
 /* Dashboard Styling */
 .dashboard-container {
     width: 90%;
