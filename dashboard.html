@@ -12,7 +12,11 @@
         <header class="dashboard-header">
             <div class="logo">LibraLink</div>
             <nav class="menu">
-                <a href="#">Browse</a>
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchBar" placeholder="Search for books..." autocomplete="off">
+                    <ul id="searchResults" class="search-results"></ul>
+                </div>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
                 <a href="#" id="logoutButton" class="sign-out">Sign Out</a>
@@ -35,17 +39,22 @@
                 <div id="featuredBookGrid" class="book-grid"></div>
             </section>
 
-            <!-- Top 8 Recommended Books Section -->
+            <!-- Top 6 Recommended Books Section -->
             <section class="recommended-books">
                 <h2>Top 8 Recommended Books</h2>
                 <div id="recommendedBookGrid" class="book-grid"></div>
             </section>
         </main>
+
+        <footer class="simple-footer">
+            <div class="footer-container">
+                <a href="#" class="footer-link">About</a>
+                <a href="mailto:info@libralink.com" class="footer-link">Contact</a>
+            </div>
+            <p class="footer-text">&copy; 2024 LibraLink. All rights reserved.</p>
+        </footer>
+        
     </div>
-
     <script src="dashboard.js"></script>
-</body>
-</html>
-
 </body>
 </html>
