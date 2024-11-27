@@ -8,31 +8,104 @@
 </head>
 <body>
     <div class="dashboard-container">
+        <!-- Dashboard Header -->
         <header class="dashboard-header">
             <div class="logo">LibraLink</div>
             <nav class="menu">
                 <a href="#">Browse</a>
-                <a href="#">Ratings</a>
-                <a href="#">Settings</a>
-                <a href="#" id="logoutButton" class="sign-out">Sign Out</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#" class="sign-out">Sign Out</a>
             </nav>
-            <div class="search-container">
-                <input type="text" id="searchBar" placeholder="Search books..." class="search-bar" onkeyup="searchFunction()">
-            </div>
         </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to LibraLink!</h1>
+                <p>Your free online library for accessible knowledge.</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
         <main class="dashboard-content">
-            <aside class="sidebar">
-                <h2>Weekly Spotlight</h2>
-                <div class="card">Spotlight 1</div>
-                <div class="card">Spotlight 2</div>
-                <div class="card">Spotlight 3</div>
-            </aside>
-            <section class="spotlight">
-                <h2>Featured Book of the Week</h2>
-                <div class="spotlight-card">Book of the Week</div>
+            <!-- Featured Books Section -->
+            <section class="featured-books">
+                <h2>Featured Books</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Book Title 1</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Book Title 2</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Book Title 3</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Top 6 Recommended Books Section -->
+            <section class="recommended-books">
+                <h2>Top 6 Recommended Books</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Recommended Book 1</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Recommended Book 2</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Recommended Book 3</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Recommended Book 4</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Recommended Book 5</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-thumbnail"></div>
+                        <div class="book-details">
+                            <p class="book-title">Recommended Book 6</p>
+                            <p class="book-description">Short description of the book.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
-    <script src="dashboard.js"></script>
 </body>
 </html>
