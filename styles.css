@@ -86,7 +86,7 @@ a:hover {
 /* Dashboard Container */
 .dashboard-container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: auto;
     background-color: #ffffff;
     border-radius: 8px;
@@ -205,4 +205,101 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Search Bar Styles */
+.search-container {
+    position: relative;
+    display: inline-block;
+    width: 300px; /* Adjust width as needed */
+}
+
+#searchBar {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Dropdown Search Results */
+.search-results {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px; /* Ensure space between search bar and results */
+    left: 0;
+    width: 100%;
+    background-color: white; /* Clear white background for readability */
+    border: 1px solid #ddd;
+    border-top: none;
+    max-height: 200px; /* Add scroll if results exceed this height */
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it's above other elements */
+    display: none; /* Initially hidden */
+}
+
+/* Style each result item */
+.search-results li {
+    padding: 10px;
+    font-size: 16px;
+    color: #333; /* Dark text for better readability */
+    cursor: pointer;
+    border-bottom: 1px solid #eee; /* Light separator between items */
+}
+
+/* Highlight hovered item */
+.search-results li:hover {
+    background-color: #f1f1f1;
+    color: #000; /* Ensure the hover color is distinct */
+}
+
+/* Optional: No results found */
+.search-results.no-results {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 10px;
+}
+
+/* Simple Footer Styling */
+.simple-footer {
+    background-color: #4CAF50;  /* Light Green */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    margin-top: 5rem;  /* Move footer further down */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;  /* Increased gap for better visual spacing */
+    padding-bottom: 1rem;  /* Added some spacing between the links and copyright */
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;  /* Slightly bolder for emphasis */
+    transition: color 0.3s ease;  /* Smooth color transition on hover */
+}
+
+.footer-link:hover {
+    color: #A5D6A7;  /* Light Green color on hover */
+    text-decoration: underline;  /* Adds underline on hover */
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: #bbb;  /* Light gray color for the copyright text */
+    margin-top: 1rem;
 }
