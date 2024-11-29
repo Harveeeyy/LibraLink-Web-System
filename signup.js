@@ -1,14 +1,14 @@
 document.getElementById('signupForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const username = document.getElementById('newUsername').value;
-    const password = document.getElementById('newPassword').value;
+    const username = document.getElementById('username').value; // Corrected to 'username'
+    const password = document.getElementById('password').value; // Corrected to 'password'
     const confirmPassword = document.getElementById('confirmPassword').value;
 
     // Basic validation
     if (password !== confirmPassword) {
-        document.getElementById('signupErrorMessage').textContent = 'Passwords do not match';
-        document.getElementById('signupErrorMessage').style.display = 'block';
+        document.getElementById('errorMessage').textContent = 'Passwords do not match';
+        document.getElementById('errorMessage').style.display = 'block';
         return;
     }
 
@@ -24,8 +24,8 @@ document.getElementById('signupForm').addEventListener('submit', async (event) =
         if (data.success) {
             window.location.href = 'login.html'; // Redirect to login
         } else if (data.error) {
-            document.getElementById('signupErrorMessage').textContent = data.error;
-            document.getElementById('signupErrorMessage').style.display = 'block';
+            document.getElementById('errorMessage').textContent = data.error;
+            document.getElementById('errorMessage').style.display = 'block';
         }
     } catch (error) {
         console.error('Error during signup:', error);
