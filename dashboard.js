@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "login.html";
     });
 
-    // Sample book data (replace with actual data from your backend)
     const featuredBooks = [
         { title: "Featured Book 1", author: "Author 1", description: "This is a detailed description for Featured Book 1." },
         { title: "Featured Book 2", author: "Author 2", description: "This is a detailed description for Featured Book 2." },
@@ -29,15 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
         { title: "Recommended Book 8", author: "Author H", description: "This is a detailed description for Recommended Book 8." }
     ];
 
-    // Function to display books in a grid
     function displayBooks(bookList, targetElementId) {
         const bookGrid = document.getElementById(targetElementId);
-        bookGrid.innerHTML = "";  // Clear existing books
+        bookGrid.innerHTML = ""; 
 
         bookList.forEach(book => {
             const bookCard = document.createElement("div");
             bookCard.classList.add("book-card");
-            bookCard.addEventListener("click", () => showBookDetails(book)); // Add event listener for clicks on books
+            bookCard.addEventListener("click", () => showBookDetails(book)); 
 
             const bookThumbnail = document.createElement("div");
             bookThumbnail.classList.add("book-thumbnail");
@@ -56,15 +54,48 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Function to show book details when clicked
+    function searchBooks() {
+        const searchTerm = document.getElementById("searchBar").value.toLowerCase();
+        const searchResults = featuredBooks.concat(recommendedBooks).filter(book => book.title.toLowerCase().includes(searchTerm));
+
+        displaySearchResults(searchResults);
+    }
+
+    function displaySearchResults(searchResults) {
+        const resultsList = document.getElementById("searchResults");
+        resultsList.innerHTML = ""; 
+
+        if (searchResults.length === 0) {
+            resultsList.style.display = "none"; 
+            return;
+        }
+
+        searchResults.forEach(book => {
+            const resultItem = document.createElement("li");
+            resultItem.textContent = book.title;
+            resultItem.addEventListener("click", () => showBookDetails(book));
+            resultsList.appendChild(resultItem);
+        });
+
+        resultsList.style.display = "block"; 
+    }
+
     function showBookDetails(book) {
-        // Store book details in localStorage
         localStorage.setItem("selectedBook", JSON.stringify(book));
-        // Redirect to book details page
         window.location.href = "book-details.html";
     }
 
-    // Initialize with all books
+    document.getElementById("searchBar").addEventListener("input", searchBooks);
+
+    // Hide the search results when clicking outside
+    document.addEventListener("click", (e) => {
+        const searchBar = document.getElementById("searchBar");
+        const resultsList = document.getElementById("searchResults");
+        if (!searchBar.contains(e.target) && !resultsList.contains(e.target)) {
+            resultsList.style.display = "none";
+        }
+    });
+
     displayBooks(featuredBooks, "featuredBookGrid");
     displayBooks(recommendedBooks, "recommendedBookGrid");
 });
