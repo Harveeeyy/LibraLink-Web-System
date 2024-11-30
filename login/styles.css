@@ -1,0 +1,91 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #070e16;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.form-container {
+  display: flex;
+  width: 200%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.form {
+  width: 50%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #070e16;
+  color: #fff;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+}
+
+.form input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.form button {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #070e16;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #ddd;
+}
+
+.form p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.form span {
+  color: #00aaff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form span:hover {
+  text-decoration: underline;
+}
+
+/* Active Animation */
+.container .form-container.active {
+  transform: translateX(-50%);
+}
